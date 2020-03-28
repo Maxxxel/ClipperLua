@@ -10,7 +10,6 @@ You can find some details in the official page: http://www.angusj.com/delphi/cli
 
 ## API
 
----
 ```lua
 1. Point:
 + void. New(number x, number y)
