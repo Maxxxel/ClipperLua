@@ -62,8 +62,7 @@ CPaths* COffsetPaths(CClipperOffset* self, CPaths* paths, double delta, int join
 // ClipperTri
 CClipperTri* CTriangulateNew();
 void CTriangulateDelete(CClipperTri* self);
-void CTriangulateAddPaths(CClipperTri* self, CPaths* paths);
-CPaths* CTriangulateExecute(CClipperTri* self, int fillRule);
+CPaths* CTriangulateExecute(CClipperTri* self, CPaths* paths, int fillRule);
 ]]
 
 _G.ClipperLib = {
@@ -200,13 +199,9 @@ function ClipperTri.New()
 	return ffi.gc(C.CTriangulateNew(), C.CTriangulateDelete)
 end
 
-function ClipperTri:AddPaths(paths)
-	return C.CTriangulateAddPaths(self, paths)
-end
-
-function ClipperTri:TriangulatePaths(fillRule)
+function ClipperTri:TriangulatePaths(paths, fillRule)
 	local fillRule = fillRule or ClipperLib.FillRule.EvenOdd
-	return C.CTriangulateExecute(self, fillRule)
+	return C.CTriangulateExecute(self, paths, fillRule)
 end
 
 ffi.metatype("CPoint", {__index = Point})

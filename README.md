@@ -62,6 +62,5 @@ Offsetting options:
 
 6. ClipperTri:
 + void. New()
-+ void: AddPaths(Paths paths)
-+ Paths: TriangulatePaths(number fillRule)
++ Paths: TriangulatePaths(Paths paths, number fillRule)
 ```
