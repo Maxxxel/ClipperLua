@@ -1,4 +1,3 @@
-
 local C = require "ClipperLib"
 local Point, Path, Paths, Clipper =
 	C.Point, C.Path, C.Paths, C.Clipper
