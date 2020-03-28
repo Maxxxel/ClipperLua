@@ -13,9 +13,12 @@ You can find more details in the official page: http://www.angusj.com/delphi/cli
 
 ## Demonstration
 
-![Random Polygons](http://www.angusj.com/delphi/clipper3.png)
-![Circular](http://www.angusj.com/delphi/clipper4.png)
-![Offsetting](http://www.angusj.com/delphi/clipper9.png)
+Linear polygons:
+![A](http://www.angusj.com/delphi/clipper3.png)
+Circular polygons:
+![B](http://www.angusj.com/delphi/clipper4.png)
+Offsetting options:
+![C](http://www.angusj.com/delphi/clipper9.png)
 
 ## API
 
