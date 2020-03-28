@@ -55,16 +55,16 @@ Offsetting options:
 + void: AddPath(Path path, number pathType, bool open = false)
 + void: AddPaths(Paths paths, number pathType, bool open = false)
 + Paths: ClipPaths(number clipType = ClipperLib.ClipType.Intersection,
-	number fillRule = ClipperLib.FillRule.EvenOdd)
+   number fillRule = ClipperLib.FillRule.EvenOdd)
 
 5. ClipperOffset:
 + void. New(number miterLimit = 2.0, number arcTolerance = 0.0)
 + Paths: OffsetPaths(Paths paths, number delta,
-	number joinType = ClipperLib.JoinType.Round,
-	number endType = ClipperLib.EndType.Polygon)
+   number joinType = ClipperLib.JoinType.Round,
+   number endType = ClipperLib.EndType.Polygon)
 
 6. ClipperTri:
 + void. New()
 + Paths: TriangulatePaths(Paths paths,
-	number fillRule = ClipperLib.FillRule.EvenOdd)
+   number fillRule = ClipperLib.FillRule.EvenOdd)
 ```
