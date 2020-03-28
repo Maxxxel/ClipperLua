@@ -40,7 +40,7 @@ Offsetting options:
 + number: Area()
 + bool: Orientation()
 + void: Reverse()
-+ Paths: Simplify(number fillRule)
++ Paths: Simplify(number fillRule = ClipperLib.FillRule.EvenOdd)
 
 3. Paths:
 + void. New()
@@ -48,19 +48,23 @@ Offsetting options:
 + void: Add(Path path)
 + number: Size()
 + void: Reverse()
-+ Paths: Simplify(number fillRule)
++ Paths: Simplify(number fillRule = ClipperLib.FillRule.EvenOdd)
 
 4. Clipper:
 + void. New()
-+ void: AddPath(Path path, number pathType, bool open)
-+ void: AddPaths(Paths paths, number pathType, bool open)
-+ Paths: ClipPaths(number clipType, number fillRule)
++ void: AddPath(Path path, number pathType, bool open = false)
++ void: AddPaths(Paths paths, number pathType, bool open = false)
++ Paths: ClipPaths(number clipType = ClipperLib.ClipType.Intersection,
+	number fillRule = ClipperLib.FillRule.EvenOdd)
 
 5. ClipperOffset:
-+ void. New(number miterLimit, number arcTolerance)
-+ Paths: OffsetPaths(Paths paths, number delta, number joinType, number endType)
++ void. New(number miterLimit = 2.0, number arcTolerance = 0.0)
++ Paths: OffsetPaths(Paths paths, number delta,
+	number joinType = ClipperLib.JoinType.Round,
+	number endType = ClipperLib.EndType.Polygon)
 
 6. ClipperTri:
 + void. New()
-+ Paths: TriangulatePaths(Paths paths, number fillRule)
++ Paths: TriangulatePaths(Paths paths,
+	number fillRule = ClipperLib.FillRule.EvenOdd)
 ```
