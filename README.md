@@ -8,7 +8,8 @@ and runs on beta version 10.0 which is a significant rewrite of previous version
 
 The repository contains the compiled dll library supporting both 32 and 64-bit Windows OS and uses FFI binding solution  
 to work with LuaJIT (Just-In-Time) programming language.  
-You can find some details in the official page: http://www.angusj.com/delphi/clipper/documentation/Docs/Overview/_Body.htm
+
+You can find more details in the official page: http://www.angusj.com/delphi/clipper/documentation/Docs/Overview/_Body.htm
 
 ## API
 
